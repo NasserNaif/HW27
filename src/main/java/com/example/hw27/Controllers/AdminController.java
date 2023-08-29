@@ -23,7 +23,7 @@ public class AdminController {
         return ResponseEntity.status(200).body(adminService.getAllUsers());
     }
 
-    @DeleteMapping("delete-user/{id}")
+    @DeleteMapping("/delete-user/{id}")
     public ResponseEntity<ApiResponse> deleteUser(@PathVariable Integer id) {
         adminService.deleteUser(id);
         return ResponseEntity.status(200).body(new ApiResponse("user deleted"));
